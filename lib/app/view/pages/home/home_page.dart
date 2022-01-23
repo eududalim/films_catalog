@@ -1,6 +1,6 @@
+import 'package:films_catalog/app/view/pages/home/card_film.dart';
 import 'package:flutter/material.dart';
-
-import 'elements/button_tab.dart';
+import 'elements/categories.dart';
 import 'elements/search_button.dart';
 
 class HomePage extends StatelessWidget {
@@ -15,8 +15,8 @@ class HomePage extends StatelessWidget {
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.all(20),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
+            child: ListView(
+              // mainAxisSize: MainAxisSize.min,
               children: [
                 Container(
                   child: Text(
@@ -28,36 +28,9 @@ class HomePage extends StatelessWidget {
                 ),
                 const SearchButton(),
                 const SizedBox(height: 18),
-                Container(
-                  height: 28,
-                  alignment: Alignment.center,
-                  child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      physics: const AlwaysScrollableScrollPhysics(),
-                      itemCount: 4,
-                      itemBuilder: (context, index) {
-                        index++;
-
-                        final categories = {
-                          1: 'Ação',
-                          2: 'Aventura',
-                          3: 'Fantasia',
-                          4: 'Comédia'
-                        };
-
-                        bool select = false;
-                        if (selectTab == (index)) {
-                          select = true;
-                        } else {
-                          select = false;
-                        }
-
-                        return ButtonTab(
-                          select: select,
-                          textTab: categories[index] ?? '',
-                        );
-                      }),
-                ),
+                Categories(selectTab: selectTab),
+                const SizedBox(height: 18),
+                FilmCard()
               ],
             ),
           ),
