@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Controller();
+    ControllerGenres().getGenres();
 
     int selectTab = 1;
     return DefaultTabController(
