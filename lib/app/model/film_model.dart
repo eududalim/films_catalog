@@ -1,7 +1,9 @@
 class FilmModel {
   // id do filme
   int id;
-  // Imagem do filme
+  //poster do filme
+  String poster;
+  // Imagem de fundo do filme
   String backdrop;
   //titulo em portugues
   String titlePt;
@@ -16,23 +18,25 @@ class FilmModel {
   //descrição
   String overview;
   //generos
-  List<Map> genres;
+  List genres;
 
   FilmModel({
     required this.id,
-    required this.backdrop,
-    required this.genres,
-    required this.originalTitle,
     required this.titlePt,
-    required this.overview,
-    required this.runtime,
-    required this.voteAvorage,
-    required this.releaseDate,
+    required this.genres,
+    required this.poster,
+    this.backdrop = '',
+    this.originalTitle = '',
+    this.overview = '',
+    this.runtime = '',
+    this.voteAvorage = 0,
+    this.releaseDate = '',
   });
 
   factory FilmModel.fromJson(Map<String, dynamic> parsedJson) {
     return FilmModel(
         id: parsedJson['id'],
+        poster: parsedJson['poster_path'],
         backdrop: parsedJson['backdrop_path'],
         genres: parsedJson['genres'],
         originalTitle: parsedJson['original_title'],

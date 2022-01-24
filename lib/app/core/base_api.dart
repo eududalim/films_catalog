@@ -3,8 +3,9 @@ class BaseApi {
 
   static const _language = 'pt-BR';
 
-  static const _page = '1';
-
-  static const genre =
+  static const apiGenres =
       'https://api.themoviedb.org/3/genre/movie/list?api_key=$_apiKey&language=$_language';
+
+  static String search(String search) =>
+      'https://api.themoviedb.org/3/search/movie?api_key=$_apiKey&language=$_language&query=$search&page=1&include_adult=false';
 }

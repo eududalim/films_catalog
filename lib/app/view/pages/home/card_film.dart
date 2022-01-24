@@ -1,8 +1,10 @@
+import 'package:films_catalog/app/model/film_model.dart';
 import 'package:flutter/material.dart';
 
 class FilmCard extends StatelessWidget {
-  const FilmCard({Key? key}) : super(key: key);
+  const FilmCard({Key? key, required this.film}) : super(key: key);
 
+  final FilmModel film;
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -24,6 +26,10 @@ class FilmCard extends StatelessWidget {
               Colors.black87,
               Colors.black
             ])),
+        child: Image.network(
+          film.backdrop,
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }
