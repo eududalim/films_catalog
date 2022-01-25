@@ -3,6 +3,9 @@ class BaseApi {
 
   static const _language = 'pt-BR';
 
+  static String getUrlImage(String pathImage) =>
+      'https://image.tmdb.org/t/p/w342$pathImage';
+
   static const apiGenres =
       'https://api.themoviedb.org/3/genre/movie/list?api_key=$_apiKey&language=$_language';
 

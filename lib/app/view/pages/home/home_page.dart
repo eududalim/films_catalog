@@ -1,5 +1,3 @@
-import 'package:films_catalog/app/data/controller_categories.dart';
-import 'package:films_catalog/app/view/pages/home/card_film.dart';
 import 'package:films_catalog/app/view/pages/home/elements/films_list.dart';
 import 'package:flutter/material.dart';
 import 'elements/categories.dart';
@@ -15,6 +13,7 @@ class HomePage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: ListView(
+            shrinkWrap: true,
             // mainAxisSize: MainAxisSize.min,
             children: [
               Container(

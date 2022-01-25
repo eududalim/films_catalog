@@ -21,12 +21,22 @@ class FilmsList extends StatelessWidget {
               future: controller.getResults(),
               builder: (context, snapshot) {
                 if (snapshot.hasData) {
-                  final list = snapshot.data!['results'];
+                  final List resultList = snapshot.data!['results'];
 
-                  return ListView(
-                    children: list.map((e) {
-                      log(e.runtimeType.toString());
-                      // final filmModel = FilmModel.fromJson(e);
+                  return Column(
+                    children: resultList.map((e) {
+                      Map<String, dynamic> filmResult =
+                          e as Map<String, dynamic>;
+
+                      if (filmResult['popularity'] > 2) {
+                        final filmModel = FilmModel(
+                            id: filmResult['id'],
+                            titlePt: filmResult['title'],
+                            genres: filmResult['genre_ids'],
+                            poster: filmResult['poster_path']);
+                        return FilmCard(film: filmModel);
+                      }
+
                       return Container();
                     }).toList(),
                   );

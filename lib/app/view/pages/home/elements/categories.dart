@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:films_catalog/app/data/controller_categories.dart';
 import 'package:films_catalog/app/model/genres.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +33,7 @@ class Categories extends StatelessWidget {
                   }),
             );
           }
-          return const LinearProgressIndicator();
+          return Container();
         });
   }
 }

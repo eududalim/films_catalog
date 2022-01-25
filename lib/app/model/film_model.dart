@@ -35,15 +35,15 @@ class FilmModel {
 
   factory FilmModel.fromJson(Map<String, dynamic> parsedJson) {
     return FilmModel(
-        id: parsedJson['id'],
-        poster: parsedJson['poster_path'],
-        backdrop: parsedJson['backdrop_path'],
-        genres: parsedJson['genres'],
-        originalTitle: parsedJson['original_title'],
-        titlePt: parsedJson['title'],
-        overview: parsedJson['overview'],
-        runtime: parsedJson['runtime'],
-        voteAvorage: parsedJson['vote_average'],
-        releaseDate: parsedJson['release_date']);
+        id: parsedJson['id'] ?? '',
+        poster: parsedJson['poster_path'] ?? '',
+        backdrop: parsedJson['backdrop_path'] ?? '',
+        genres: parsedJson['genres'] ?? '',
+        originalTitle: parsedJson['original_title'] ?? '',
+        titlePt: parsedJson['title'] ?? '',
+        overview: parsedJson['overview'] ?? '',
+        runtime: parsedJson['runtime'] ?? '',
+        voteAvorage: parsedJson['vote_average'] ?? '',
+        releaseDate: parsedJson['release_date'] ?? '');
   }
 }

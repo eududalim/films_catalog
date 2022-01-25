@@ -1,3 +1,6 @@
+import 'dart:developer';
+
+import 'package:films_catalog/app/core/base_api.dart';
 import 'package:films_catalog/app/model/film_model.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +30,8 @@ class FilmCard extends StatelessWidget {
               Colors.black
             ])),
         child: Image.network(
-          film.backdrop,
+          BaseApi.getUrlImage(film.poster),
+          errorBuilder: (context, error, stackTrace) => Container(),
           fit: BoxFit.cover,
         ),
       ),
