@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 
 class TitleTextWidget extends StatelessWidget {
@@ -24,7 +22,7 @@ class TitleTextWidget extends StatelessWidget {
         ),
         const SizedBox(height: 8),
         Text(
-          textList?[0] ?? '',
+          '',
           overflow: TextOverflow.clip,
           style: TextStyle(
               fontSize: 12,
