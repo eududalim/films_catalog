@@ -1,5 +1,6 @@
 import 'package:films_catalog/app/view/pages/home/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
         title: 'Catalogo de Filmes',
         theme: ThemeData(
             primarySwatch: Colors.blueGrey,

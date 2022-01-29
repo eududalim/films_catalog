@@ -6,6 +6,12 @@ class BaseApi {
   static String getUrlImage(String pathImage) =>
       'https://image.tmdb.org/t/p/w342$pathImage';
 
+  static String getDetailsMovie(int id) =>
+      'https://api.themoviedb.org/3/movie/${id.toString()}?api_key=$_apiKey&language=$_language';
+
+  static String getCreditsMovie(int id) =>
+      'https://api.themoviedb.org/3/movie/${id.toString()}/credits?api_key=$_apiKey&language=$_language';
+
   static const apiGenres =
       'https://api.themoviedb.org/3/genre/movie/list?api_key=$_apiKey&language=$_language';
 
