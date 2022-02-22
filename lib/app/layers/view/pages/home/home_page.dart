@@ -1,9 +1,11 @@
-import 'package:films_catalog/app/data/controller_categories.dart';
-import 'package:films_catalog/app/view/pages/home/elements/films_list.dart';
 import 'package:flutter/material.dart';
 import 'package:get/instance_manager.dart';
+
 import 'elements/categories.dart';
+import 'elements/films_list.dart';
 import 'elements/search_button.dart';
+
+import '../../../controllers/controller_categories.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);

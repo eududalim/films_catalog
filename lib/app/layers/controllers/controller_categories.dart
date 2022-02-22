@@ -1,11 +1,12 @@
 import 'dart:async';
 import 'dart:convert';
-import 'dart:developer';
-import 'package:films_catalog/app/core/base_api.dart';
-import 'package:films_catalog/app/model/credits_movie_model.dart';
-import 'package:films_catalog/app/model/film_model.dart';
-import 'package:films_catalog/app/model/genres.dart';
-import 'package:films_catalog/app/model/list_genres.dart';
+
+import '../../core/utils/base_api.dart';
+import '../model/credits_movie_model.dart';
+import '../model/film_model.dart';
+import '../model/genres.dart';
+import '../model/list_genres.dart';
+
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 

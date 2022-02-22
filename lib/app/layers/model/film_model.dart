@@ -1,6 +1,4 @@
-import 'dart:developer';
-
-import 'package:films_catalog/app/model/credits_movie_model.dart';
+import 'credits_movie_model.dart';
 
 class FilmModel {
   // id do filme

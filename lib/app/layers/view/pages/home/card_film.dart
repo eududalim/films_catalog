@@ -1,6 +1,7 @@
-import 'package:films_catalog/app/core/base_api.dart';
-import 'package:films_catalog/app/data/controller_categories.dart';
-import 'package:films_catalog/app/model/film_model.dart';
+import '../../../../core/utils/base_api.dart';
+import '../../../controllers/controller_categories.dart';
+import '../../../model/film_model.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/instance_manager.dart';
 

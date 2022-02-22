@@ -1,5 +1,6 @@
-import 'package:films_catalog/app/data/controller_categories.dart';
-import 'package:films_catalog/app/model/genres.dart';
+import '../../../../controllers/controller_categories.dart';
+import '../../../../model/genres.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/instance_manager.dart';
 

@@ -1,6 +1,7 @@
-import 'package:films_catalog/app/core/base_api.dart';
-import 'package:films_catalog/app/model/film_model.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../../core/utils/base_api.dart';
+import '../../../../model/film_model.dart';
 
 class PosterMovie extends StatelessWidget {
   const PosterMovie({

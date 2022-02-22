@@ -1,10 +1,10 @@
-import 'package:films_catalog/app/data/controller_categories.dart';
-import 'package:films_catalog/app/model/film_model.dart';
-import 'package:films_catalog/app/view/pages/film/details_movie_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../card_film.dart';
+import '../../../../controllers/controller_categories.dart';
+import '../../../../model/film_model.dart';
+import '../../film/details_movie_page.dart';
 
 class FilmsList extends StatelessWidget {
   const FilmsList({

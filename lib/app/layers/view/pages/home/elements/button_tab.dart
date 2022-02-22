@@ -1,7 +1,8 @@
-import 'package:films_catalog/app/data/controller_categories.dart';
-import 'package:films_catalog/app/model/genres.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../../../controllers/controller_categories.dart';
+import '../../../../model/genres.dart';
 
 class ButtonTab extends StatelessWidget {
   const ButtonTab({Key? key, required this.index, required this.genre})

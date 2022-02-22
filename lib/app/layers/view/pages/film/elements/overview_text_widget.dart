@@ -1,4 +1,5 @@
-import 'package:films_catalog/app/model/film_model.dart';
+import '../../../../model/film_model.dart';
+
 import 'package:flutter/material.dart';
 
 class OverviewTextWidget extends StatelessWidget {

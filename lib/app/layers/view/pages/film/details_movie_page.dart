@@ -1,16 +1,16 @@
-import 'package:films_catalog/app/data/controller_categories.dart';
-import 'package:films_catalog/app/model/film_model.dart';
-import 'package:films_catalog/app/view/pages/film/elements/back_button_custom.dart';
-import 'package:films_catalog/app/view/pages/film/elements/box_line_grey.dart';
-import 'package:films_catalog/app/view/pages/film/elements/data_duration.dart';
-import 'package:films_catalog/app/view/pages/film/elements/genres_widget.dart';
-import 'package:films_catalog/app/view/pages/film/elements/overview_text_widget.dart';
-import 'package:films_catalog/app/view/pages/film/elements/title_text_widget.dart';
+import '../../../controllers/controller_categories.dart';
+import '../../../model/film_model.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/instance_manager.dart';
 
-import 'elements/grey_box_info.dart';
+import 'elements/back_button_custom.dart';
+import 'elements/box_line_grey.dart';
+import 'elements/data_duration.dart';
+import 'elements/genres_widget.dart';
+import 'elements/overview_text_widget.dart';
 import 'elements/poster_movie.dart';
+import 'elements/title_text_widget.dart';
 import 'elements/titles_film.dart';
 import 'elements/vote_avorage.dart';
 

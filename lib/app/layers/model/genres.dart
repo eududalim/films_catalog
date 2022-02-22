@@ -1,8 +1,8 @@
 class Genres {
-  int? id;
-  String? name;
+  late int id;
+  late String name;
 
-  Genres({this.id, this.name});
+  Genres({required this.id, required this.name});
 
   Genres.fromJson(Map<String, dynamic> json) {
     id = json['id'];
