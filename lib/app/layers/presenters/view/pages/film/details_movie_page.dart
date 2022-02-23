@@ -1,5 +1,5 @@
 import '../../../controllers/controller_categories.dart';
-import '../../../model/film_model.dart';
+import '../../../../model/film_model.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/instance_manager.dart';

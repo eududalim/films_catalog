@@ -1,5 +1,5 @@
 import '../../../../controllers/controller_categories.dart';
-import '../../../../model/genres.dart';
+import '../../../../../model/genres.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/instance_manager.dart';
