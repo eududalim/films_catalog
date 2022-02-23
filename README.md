@@ -1,16 +1,24 @@
 # films_catalog
 
-A new Flutter project.
+Um projeto de desafio tecnico desenvolvido para Cubos  Academy.
+Aplicativo que busca na API e exibe informações de filmes.
 
-## Getting Started
+A API é do <https://www.themoviedb.org/documentation/api?language=pt-BR>
 
-This project is a starting point for a Flutter application.
+Protótipo: <https://www.figma.com/file/p2vU5rmkSnulbxEqHjk5ah/Desafio-Flutter-Cubos?node-id=0%3A1>
 
-A few resources to get you started if this is your first Flutter project:
+Este projeto foi desenvolvido usando Dart e Flutter, nas seguintes versões:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Dart 2.15
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Flutter 2.10.1
+
+## Dependencias
+
+Este projeto utiliza das seguintes dependencias e suas versões:
+
+http: ^0.13.4
+
+get: ^4.6.1
+
+get_it: any
