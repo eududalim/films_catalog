@@ -32,7 +32,7 @@ class ButtonTab extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 12),
           margin: const EdgeInsets.symmetric(horizontal: 5),
           child: Text(
-            genre.name ?? '',
+            genre.name ,
             style: TextStyle(
                 fontWeight: FontWeight.w300,
                 color: select ? Colors.white : Colors.black),

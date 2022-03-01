@@ -25,7 +25,7 @@ class ControllerFilms extends GetxController {
     initResults();
   }
 
-  ///Função para inicializar homepage
+  ///Função para buscar primeiros resultados
   initResults() {
     getResults().then((value) {
       _searchResult.sink.add(value);
@@ -38,7 +38,7 @@ class ControllerFilms extends GetxController {
     final data = json.decode(response.body) as Map<String, dynamic>;
     ListGenres _listGenres = ListGenres.fromJson(data);
     List<Genres> list = _listGenres.genres!.sublist(0, 4);
-    _searchResult.sink.add(await getResults(query: list[select].name ?? ''));
+    _searchResult.sink.add(await getResults(query: list[select].name));
     _listMap(_listGenres.genres!);
     update();
     return list;
@@ -47,14 +47,14 @@ class ControllerFilms extends GetxController {
 //Cria um Map com os ids e nomes das categorias
   void _listMap(List<Genres> list) {
     for (var genre in list) {
-      genresMap.addAll({genre.id!: genre.name!});
+      genresMap.addAll({genre.id: genre.name});
     }
   }
 
   //Função chamada ao clicar botão de categoria
   onTapButton(Genres genre, int index) async {
     select = index;
-    _searchResult.sink.add(await getResults(query: genre.name!));
+    _searchResult.sink.add(await getResults(query: genre.name));
     update();
   }
 
