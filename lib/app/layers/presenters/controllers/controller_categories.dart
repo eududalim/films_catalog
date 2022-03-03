@@ -1,11 +1,13 @@
 import 'dart:async';
 import 'dart:convert';
 
+import 'package:films_catalog/app/layers/infra/model/movie_details_model.dart';
+
 import '../../../core/utils/base_api.dart';
-import '../../model/credits_movie_model.dart';
-import '../../model/film_model.dart';
-import '../../model/genres.dart';
-import '../../model/list_genres.dart';
+import '../../infra/model/credits_movie_model.dart';
+import '../../infra/model/movie_model.dart';
+import '../../infra/model/genres.dart';
+import '../../infra/model/list_genres.dart';
 
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
@@ -69,16 +71,16 @@ class ControllerFilms extends GetxController {
   }
 
   ///Obtem os detalhes do filme usando id
-  Future<FilmModel> getDetailsFilm(int id) async {
+  Future<MovieDetailsModel> getDetailsFilm(int id) async {
     Uri uri = Uri.parse(BaseApi.getDetailsMovie(id));
 
     http.Response response = await http.get(uri);
 
     final data = jsonDecode(response.body) as Map<String, dynamic>;
 
-    FilmModel filmModel = FilmModel.fromJson(data);
+    MovieDetailsModel filmModel = MovieDetailsModel.fromJson(data);
 
-    filmModel.creditsMovieModel = await getCreditsFilm(id);
+    filmModel.creditsMovie = await getCreditsFilm(id);
 
     return filmModel;
   }

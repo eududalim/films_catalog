@@ -1,5 +1,7 @@
+import 'package:films_catalog/app/layers/infra/model/movie_details_model.dart';
+
+import '../../../../infra/model/movie_model.dart';
 import '../../../controllers/controller_categories.dart';
-import '../../../../model/film_model.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/instance_manager.dart';
@@ -23,12 +25,12 @@ class DetailsMoviePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final _controller = Get.find<ControllerFilms>();
 
-    return FutureBuilder<FilmModel>(
+    return FutureBuilder<MovieDetailsModel>(
         future: _controller.getDetailsFilm(id),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             final film = snapshot.data!;
-            final _duration = _controller.minutesToHours(film.runtime!);
+            final _duration = _controller.minutesToHours(film.runtime);
 
             return SafeArea(
                 child: Scaffold(
@@ -69,13 +71,13 @@ class DetailsMoviePage extends StatelessWidget {
                         const SizedBox(height: 4),
                         BoxLineGrey(
                             text1: 'Produtoras: ',
-                            text2: film.productioCompanies?[0].toString()),
+                            text2: film.productioCompanies[0].toString()),
                         const SizedBox(height: 40),
                         Row(
                           children: [
                             TitleTextWidget(
                                 title: 'Diretor',
-                                textList: film.creditsMovieModel?.director),
+                                textList: film.creditsMovie?.director),
                           ],
                         ),
                         const SizedBox(height: 40),
@@ -83,7 +85,7 @@ class DetailsMoviePage extends StatelessWidget {
                           children: [
                             TitleTextWidget(
                                 title: 'Elenco',
-                                textList: film.creditsMovieModel?.crew),
+                                textList: film.creditsMovie?.crew),
                           ],
                         ),
                       ],

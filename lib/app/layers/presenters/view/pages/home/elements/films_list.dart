@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../../../infra/model/movie_model.dart';
 import '../card_film.dart';
 import '../../../../controllers/controller_categories.dart';
-import '../../../../../model/film_model.dart';
 import '../../film/details_movie_page.dart';
 
 class FilmsList extends StatelessWidget {
@@ -32,7 +32,7 @@ class FilmsList extends StatelessWidget {
               Map<String, dynamic> filmResult = e as Map<String, dynamic>;
 
               if (filmResult['popularity'] > 5) {
-                final filmModel = FilmModel.fromJson(filmResult);
+                final filmModel = MovieModel.fromJson(filmResult);
 
                 return GestureDetector(
                   child: FilmCard(film: filmModel),

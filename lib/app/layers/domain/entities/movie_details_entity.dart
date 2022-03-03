@@ -1,6 +1,7 @@
+import 'package:films_catalog/app/layers/domain/entities/credits_movie_entity.dart';
 import 'package:films_catalog/app/layers/domain/entities/movie_entity.dart';
 
-import '../../model/credits_movie_model.dart';
+import 'credits_movie_entity.dart';
 
 class MovieDetailsEntity extends MovieEntity {
   // Imagem de fundo do filme
@@ -25,7 +26,7 @@ class MovieDetailsEntity extends MovieEntity {
   List productioCompanies;
 
   //Atores e Diretores
-  CreditsMovieModel creditsMovieModel;
+  CreditsMovieEntity? creditsMovie;
 
   //orçamento
   int budget;
@@ -42,7 +43,7 @@ class MovieDetailsEntity extends MovieEntity {
     required this.voteAvorage,
     required this.overview,
     required this.productioCompanies,
-    required this.creditsMovieModel,
+    this.creditsMovie,
     required this.budget,
   }) : super(id: id, poster: poster, titlePt: titlePt, genres: genres);
 }

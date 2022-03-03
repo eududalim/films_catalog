@@ -1,11 +1,11 @@
-import '../../../../../model/film_model.dart';
+import '../../../../../infra/model/movie_details_model.dart';
 
 import 'package:flutter/material.dart';
 
 class OverviewTextWidget extends StatelessWidget {
   const OverviewTextWidget({Key? key, required this.film}) : super(key: key);
 
-  final FilmModel film;
+  final MovieDetailsModel film;
 
   @override
   Widget build(BuildContext context) {

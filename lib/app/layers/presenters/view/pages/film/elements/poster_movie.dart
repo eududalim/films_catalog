@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/utils/base_api.dart';
-import '../../../../../model/film_model.dart';
+import '../../../../../infra/model/movie_details_model.dart';
 
 class PosterMovie extends StatelessWidget {
   const PosterMovie({
@@ -9,7 +9,7 @@ class PosterMovie extends StatelessWidget {
     required this.film,
   }) : super(key: key);
 
-  final FilmModel film;
+  final MovieDetailsModel film;
 
   @override
   Widget build(BuildContext context) {

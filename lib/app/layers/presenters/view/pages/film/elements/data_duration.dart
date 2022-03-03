@@ -1,4 +1,4 @@
-import '../../../../../model/film_model.dart';
+import '../../../../../infra/model/movie_details_model.dart';
 
 import 'package:flutter/material.dart';
 
@@ -8,7 +8,7 @@ class DataDuration extends StatelessWidget {
   const DataDuration({Key? key, required this.film, required this.duration})
       : super(key: key);
 
-  final FilmModel film;
+  final MovieDetailsModel film;
   final List<String> duration;
 
   @override

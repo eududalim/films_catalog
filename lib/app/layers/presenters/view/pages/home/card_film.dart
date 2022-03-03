@@ -1,6 +1,6 @@
 import '../../../../../core/utils/base_api.dart';
 import '../../../controllers/controller_categories.dart';
-import '../../../../model/film_model.dart';
+import '../../../../infra/model/movie_model.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/instance_manager.dart';
@@ -8,7 +8,7 @@ import 'package:get/instance_manager.dart';
 class FilmCard extends StatelessWidget {
   const FilmCard({Key? key, required this.film}) : super(key: key);
 
-  final FilmModel film;
+  final MovieModel film;
   @override
   Widget build(BuildContext context) {
     ControllerFilms controllerGenres = Get.find();

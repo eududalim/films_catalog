@@ -5,7 +5,7 @@ class CreditsMovieEntity {
   List? crew;
 
   CreditsMovieEntity({
-    required this.director,
-    required this.crew,
+    this.director,
+    this.crew,
   });
 }

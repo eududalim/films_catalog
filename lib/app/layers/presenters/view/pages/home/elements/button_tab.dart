@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../../../infra/model/genres.dart';
 import '../../../../controllers/controller_categories.dart';
-import '../../../../../model/genres.dart';
 
 class ButtonTab extends StatelessWidget {
   const ButtonTab({Key? key, required this.index, required this.genre})
@@ -32,7 +32,7 @@ class ButtonTab extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 12),
           margin: const EdgeInsets.symmetric(horizontal: 5),
           child: Text(
-            genre.name ,
+            genre.name,
             style: TextStyle(
                 fontWeight: FontWeight.w300,
                 color: select ? Colors.white : Colors.black),
