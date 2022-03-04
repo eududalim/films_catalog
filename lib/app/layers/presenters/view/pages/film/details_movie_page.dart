@@ -1,6 +1,5 @@
 import 'package:films_catalog/app/layers/infra/model/movie_details_model.dart';
 
-import '../../../../infra/model/movie_model.dart';
 import '../../../controllers/controller_categories.dart';
 
 import 'package:flutter/material.dart';
