@@ -2,7 +2,6 @@ import 'package:films_catalog/app/layers/domain/repositories/get_genres_reposito
 import 'package:films_catalog/app/layers/domain/usecases/get_genres_usecase/get_genres_usecase.dart';
 import 'package:films_catalog/app/layers/domain/usecases/get_genres_usecase/get_genres_usecase_imp.dart';
 import 'package:films_catalog/app/layers/infra/model/genres.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 class GetGenresRepositoryMock implements GetGenresRepository {

@@ -33,6 +33,7 @@ class FilmCard extends StatelessWidget {
         children: [
           Container(
             height: 470,
+            width: double.maxFinite,
             foregroundDecoration: const BoxDecoration(
                 gradient: LinearGradient(
                     begin: Alignment.topCenter,
