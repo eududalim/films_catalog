@@ -4,31 +4,31 @@ import 'package:films_catalog/app/layers/domain/entities/movie_entity.dart';
 import 'credits_movie_entity.dart';
 
 class MovieDetailsEntity extends MovieEntity {
-  // Imagem de fundo do filme
+  /// Imagem de fundo do filme
   String backdrop;
 
-  // titulo original
+  /// titulo original
   String originalTitle;
 
-  //ano de lançamento
+  ///ano de lançamento
   String releaseDate;
 
-  //duração em minutos
+  ///duração em minutos
   int runtime;
 
-  //pontuação
+  ///pontuação
   double voteAvorage;
 
-  //descrição
+  ///descrição
   String overview;
 
-  //Produtoras
+  ///Produtoras
   List productioCompanies;
 
-  //Atores e Diretores
+  ///Atores e Diretores
   CreditsMovieEntity? creditsMovie;
 
-  //orçamento
+  ///orçamento
   int budget;
 
   MovieDetailsEntity({
