@@ -24,16 +24,15 @@ class DetailsMoviePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final _controller = Get.find<ControllerFilms>();
 
-    return FutureBuilder<MovieDetailsModel>(
-        future: _controller.getDetailsFilm(id),
-        builder: (context, snapshot) {
-          if (snapshot.hasData) {
-            final film = snapshot.data!;
-            final _duration = _controller.minutesToHours(film.runtime);
+    return Scaffold(
+      body: FutureBuilder<MovieDetailsModel>(
+          future: _controller.getDetailsFilm(id),
+          builder: (context, snapshot) {
+            if (snapshot.hasData) {
+              final film = snapshot.data!;
+              final _duration = _controller.minutesToHours(film.runtime);
 
-            return SafeArea(
-                child: Scaffold(
-              body: SingleChildScrollView(
+              return SingleChildScrollView(
                 child: Stack(children: [
                   Container(
                     height: 300,
@@ -91,12 +90,12 @@ class DetailsMoviePage extends StatelessWidget {
                     ),
                   ),
                 ]),
-              ),
-            ));
-          }
-          return const Center(
-            child: CircularProgressIndicator(),
-          );
-        });
+              );
+            }
+            return const Center(
+              child: Center(child: CircularProgressIndicator()),
+            );
+          }),
+    );
   }
 }

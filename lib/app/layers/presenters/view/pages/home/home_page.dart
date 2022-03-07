@@ -15,28 +15,26 @@ class HomePage extends StatelessWidget {
     Get.put(ControllerFilms());
 
     return Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(20),
-          child: ListView(
-            shrinkWrap: true,
-            // mainAxisSize: MainAxisSize.min,
-            children: [
-              Container(
-                child: Text(
-                  'Filmes',
-                  style: Theme.of(context).textTheme.headline6,
-                ),
-                height: 60,
-                alignment: Alignment.centerLeft,
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: ListView(
+          shrinkWrap: true,
+          // mainAxisSize: MainAxisSize.min,
+          children: [
+            Container(
+              child: Text(
+                'Filmes',
+                style: Theme.of(context).textTheme.headline6,
               ),
-              const SearchButton(),
-              const SizedBox(height: 18),
-              const Categories(),
-              const SizedBox(height: 18),
-              const FilmsList()
-            ],
-          ),
+              height: 60,
+              alignment: Alignment.centerLeft,
+            ),
+            const SearchButton(),
+            const SizedBox(height: 18),
+            const Categories(),
+            const SizedBox(height: 18),
+            const FilmsList()
+          ],
         ),
       ),
     );
